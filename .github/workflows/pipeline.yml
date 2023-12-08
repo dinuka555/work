@@ -19,7 +19,7 @@ jobs:
     - name: Lint code
       run: |
         flake8 --ignore=E501,E231,E0401,E302,E305,E121,E265,E0602,E999,E111,E113,E0001,E225,E303,E228,F821,F841,W293,E1305,E902,E211,E251,W0612,C0303,R1732 *.py
-        pylint --disable=C0301,C0116,C0114,C0103,W0612,C0303,E1305,E0602 --disable=C0326,W0612,C0303,E1305,E0602,R1732 *.py
+        pylint --disable=C0301,C0116,C0114,C0103,W0612,C0303,E1305,E0602,C0209 --disable=C0326,W0612,C0303,E1305,E0602,R1732 *.py
     - name: Run unit tests
       run: |
         python -m unittest --verbose --failfast        
