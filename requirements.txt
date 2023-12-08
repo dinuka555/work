@@ -1,0 +1,7 @@
+Flask
+flake8
+pip
+pylint
+pytest
+pytest-flask
+flask_mysqldb
