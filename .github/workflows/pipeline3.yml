@@ -30,7 +30,7 @@ jobs:
     - name: Set up GCloud
       uses: google-github-actions/setup-gcloud@v1
       with:
-        version: '290.0.1'
+        version: '>= 363.0.0'
         service_account_email: ${{ secrets.GCP_SERVICE_ACCT_EMAIL }}
         service_account_key: ${{ secrets.GCP_SERVICE_ACCT_KEY }}
     - run: |
