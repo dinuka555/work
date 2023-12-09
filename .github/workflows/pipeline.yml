@@ -2,7 +2,7 @@ name: Pipeline
 
 on: [push]
 env:
-  APPLICATION_NAME: python-app
+  APPLICATION_NAME: app2
   GKE_CLUSTER: din-cluster
   IMAGE: static-site
   DEPLOYMENT_NAME: gke-test
