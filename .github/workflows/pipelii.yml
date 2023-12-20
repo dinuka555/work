@@ -40,7 +40,7 @@ jobs:
         #gcloud config set project northern-bot-281814         
         #gcloud config set run/region ${{ secrets.GCP_REGION }}
         gcloud config set run/region europe-west1-c
-        gcloud auth configure-docker
+        gcloud auth configure-docker --quiet
         gcloud info
     
     - name: Build and tag image
