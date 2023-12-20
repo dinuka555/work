@@ -31,13 +31,13 @@ jobs:
       uses: google-github-actions/setup-gcloud@v1
       with:
         version: '>= 363.0.0'
-        #service_account_email: ${{ secrets.GCP_SERVICE_ACCT_EMAIL }}
-        service_account_email: northern-bot-281814@appspot.gserviceaccount.com
-        #service_account_key: ${{ secrets.GCP_SERVICE_ACCT_KEY }}
-        service_account_key: mas
+        service_account_email: ${{ secrets.GCP_SERVICE_ACCT_EMAIL }}
+        #service_account_email: northern-bot-281814@appspot.gserviceaccount.com
+        service_account_key: ${{ secrets.GCP_SERVICE_ACCT_KEY }}
+        #service_account_key: mas
     - run: |
-        #gcloud config set project ${{ secrets.GCP_PROJECT_ID }}
-        gcloud config set project northern-bot-281814         
+        gcloud config set project ${{ secrets.GCP_PROJECT_ID }}
+        #gcloud config set project northern-bot-281814         
         #gcloud config set run/region ${{ secrets.GCP_REGION }}
         gcloud config set run/region europe-west1-c
         gcloud auth configure-docker
