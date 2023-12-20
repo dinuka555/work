@@ -31,7 +31,7 @@ jobs:
       uses: google-github-actions/setup-gcloud@master
       
       with:
-        version: '>= 363.0.0'
+        #version: '2.311.0'
         service_account_email: ${{ secrets.GCP_SERVICE_ACCT_EMAIL }}
         #service_account_email: northern-bot-281814@appspot.gserviceaccount.com
         service_account_key: ${{ secrets.GCP_SERVICE_ACCT_KEY }}
