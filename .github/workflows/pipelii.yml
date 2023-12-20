@@ -28,7 +28,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set up GCloud
-      uses: google-github-actions/setup-gcloud@v1
+      uses: google-github-actions/setup-gcloud@master
       with:
         version: '>= 363.0.0'
         service_account_email: ${{ secrets.GCP_SERVICE_ACCT_EMAIL }}
