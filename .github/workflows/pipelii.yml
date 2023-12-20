@@ -28,7 +28,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set up GCloud
-      uses: google-github-actions/setup-gcloud@main
+      uses: google-github-actions/setup-gcloud@master
       
       with:
         #version: '2.311.0'
@@ -42,15 +42,16 @@ jobs:
         #gcloud config set project northern-bot-281814         
         #gcloud config set run/region ${{ secrets.GCP_REGION }}
         #gcloud config set run/region europe-west1-c
-        gcloud auth configure-docker --quiet
+        #gcloud auth configure-docker --quiet
+        gcloud auth configure-docker \ us-central1-docker.pkg.dev
         gcloud info
     
     - name: Build and tag image
-      run: docker build  -t "gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ env.APPLICATION_NAME }}:latest" 
+      run: docker build  -t "us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ env.APPLICATION_NAME }}:latest" .
  
       
     - name: Push to GCP image registry
-      run: docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ env.APPLICATION_NAME }}:latest
+      run: docker push us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ env.APPLICATION_NAME }}:latest
 
  test_image:
     needs: [build_image]
